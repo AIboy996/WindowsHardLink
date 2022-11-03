@@ -3,7 +3,7 @@
 - `hardlink（硬链接）`是一个操作系统层面的文件指针，在用户眼中和普通的文件无异（因为所有的文件本质上就是指向数据的一个指针）。通常区别于`symbollink（软链接）`。特别地，在Windwos下还区别于`shortcut（快捷方式）`和 `junction（目录联接）`
 - 使用`CMD`的`mklink`命令可以创建这几类链接（快捷方式较为特殊，有另外的创建方法，这里不赘述）
 ```cmd
-> C:\Windows\system32>mklink
+> mklink
 创建符号链接。
 
 MKLINK [[/D] | [/H] | [/J]] Link Target
@@ -35,7 +35,7 @@ MKLINK [[/D] | [/H] | [/J]] Link Target
 根目录的脚本文件运行示例：
 
 ```cmd
-> C:\Users\yangz\iCloudDrive\猩球崛起\git\WindowsHardLink>python hl.py example output
+> python hl.py example output
 ('运行的脚本', 'hl.py')
 ('源目录', 'example')
 ('目标目录', 'output')
