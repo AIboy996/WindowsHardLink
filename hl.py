@@ -16,12 +16,12 @@ def main():
         folder = item[0]
         files = item[2]
         # 创建对应的文件夹
-        os.system(f"mkdir {folder.replace(source, target)}")
+        os.system(f'mkdir "{folder.replace(source, target)}"')
         for file in files:
             filepath = os.path.join(folder, file)
             targetpath = filepath.replace(source, target)
             # 创建硬链接
-            os.system(f"mklink /H {targetpath} {filepath}")
+            os.system(f'mklink /H "{targetpath}" "{filepath}"')
 
 
 if __name__ == "__main__":
