@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\mkhardlink\command]
+@="cmd.exe /c mklink /h \"%1\"c \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\mkhardlink\command]
+@="cmd.exe /c python C:/Users/yangz/Desktop/hl.py \"%1\" \"%1\"_hardlink"
